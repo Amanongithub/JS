@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+
+	<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<title>Untitled Document</title>
+ <link rel="stylesheet" href="tourismcss.css">
+</head>
+
+<body>
+	<section>
+		<header>
+			<a href="#" class="logo" >RTravel</a>
+			<div class="toggle" onClick="togglrmenu();"></div>
+			</header>
+		<div id="home" class="content">
+			<h2>Dream<br> Place</h2>
+		<div class="navigation">
+		<ul>
+			<li><a href="#home" onClick="togglrmenu();">HOME</a></li> 
+			<li><a id="myid" value="nor" href="packagesgrid.html">TRIP PACKAGES</a></li> 
+		
+			<li><a href="#Aboutus" onClick="togglrmenu();">About Us</a> </li> 
+			<li><a href="#Contactus" onClick="togglrmenu();">Contact Us</a></li> 
+				<li><a id="myid2" value="nor" href="feedback.html">Feedback</a></li> 
+		
+			</ul></div>
+ </div>
+
+		</section>
+
+<script type="text/javascript">
+	
+	  var time = 0;
+	
+	function togglrmenu(){
+		
+		 if( time==0) {
+			alert("Please  Register");
+			
+			
+		 }else{
+			 const menutoggle = document.querySelector('.toggle ');
+		const navigation = document.querySelector('.navigation');
+		menutoggle.classList.toggle('active');
+		navigation .classList.toggle('active');
+		 }
+	}
+	
+	function menu(){
+		
+		  var email = document.getElementById("email");
+	   var password = document.getElementById("password");
+     var   confirm_password = document.getElementById("rpassword");
+     var   cnumber = document.getElementById("cnumber");
+     var   date = document.getElementById("date");
+		
+		 if(email.value.length ==0  ) {
+			 alert("Eneter Email");
+    /*confirm_password.setCustomValidity("Passwords Don't Match");*/
+  } else if(password.value.length ==0 ){
+	  
+	   alert("Eneter Password");
+  }
+		else if(confirm_password.value.length ==0 ){
+	  
+	   alert("Eneter Confirm Password");
+  }
+		else if(password.value != confirm_password.value) {
+          confirm_password.setCustomValidity("Passwords Don't Match");
+  }
+		
+		else if(cnumber.value.length ==0 ){
+	  
+	   alert("Eneter Card Number");
+  }
+		else if(date.value.length ==0 ){
+	  
+	   alert("Eneter date");
+  }
+		
+		else{
+			alert("Register Successful");
+		 time++;
+		}
+		
+//		else {
+//    confirm_password.setCustomValidity('');
+//  }
+		
+	}
+	</script>
+<form  style="border:1px solid #ccc" onsubmit="return false" >
+  <div class="container">
+    <h1>Sign Up</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" id="email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="password" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" id="rpassword" name="psw-repeat"  required>
+    
+	   <label for="psw-repeat"><b>Card Number</b></label>
+    <input type="password" placeholder="Card Number" id="cnumber" name="cn" required>
+	  
+	   <label for="psw-repeat"><b>Expiry Date</b></label>
+    <input type="password" placeholder="Date" id="date" name="cn" required>
+	  
+	   
+	  
+  
+    
+   <!-- <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>-->
+
+   
+      <button type="button" class="cancelbtn" >Cancel</button>
+	   <button type="submit" class="signupbtn"  onClick="menu();">Sign Up</button>
+     <!-- <button type="button" style="background-color: #0B6C48" class="signupbtn" onClick="menu();">Sign Up</button>-->
+   
+  </div>
+</form>
+  <script>
+	   var email = document.getElementById("email");
+	   var password = document.getElementById("password");
+     var   confirm_password = document.getElementById("rpassword");
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+	   </script>
+	<div id="Contactus" class="plan1" style="background: #2FCBC2">
+   <img/>
+		<h2>Contact Us</h2><br>
+		 
+	<h5>With travel opening up, coral reefs that spent much of 2020 largely untouched by tourists are now seeing an influx of visitors who are eager to dive in. The return of travel is a lifesaver for local economies—but if it’s not done correctly, it could have devastating effects on the local natural environments that attract visitors in the first place and the communities who depend upon the coral reefs.</h5>
+	     </div>
+   
+    
+   
+         	
+          
+  <div id="Aboutus"class="plan1" style="background: #015b75">
+   <img  onclick=""/>
+		<h2>About Us</h2><br>
+		<h5>With travel opening up, coral reefs that spent much of 2020 largely untouched by tourists are now seeing an influx of visitors who are eager to dive in. The return of travel is a lifesaver for local economies—but if it’s not done correctly, it could have devastating effects on the local natural environments that attract visitors in the first place and the communities who depend upon the coral reefs.</h5>
+	
+	     </div>
+	
+
+
+		 	<div class="footer-social-icons" style="margin-top: 400px;">
+					
+  <h3 style="font-size: 35px;color:#015b75;text-align: center;
+			 font-family: 'Poppins', sans-serif;"><b>Follow Us</b></h3>
+    <ul class="social-icons" style="margin: 40px;">
+        <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+        <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+        <li><a href="" class="social-icon"> <i class="fa fa-rss"></i></a></li>
+        <li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+        <li><a href="" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+        <li><a href="" class="social-icon"> <i class="fa fa-github"></i></a></li>
+    </ul>
+</div>
+	
+
+	
+</body>
+<style>
+
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+</style>
+	
+	
+</html>

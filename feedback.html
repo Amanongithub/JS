@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Feedback Form</title>
+	<link rel="stylesheet" href="tourismcss.css">
+</head>
+
+<body>
+	<header>
+			<a href="#" class="logo" >RTravel</a>
+		
+			</header>
+	<form onsubmit="return false" style="margin-top: 100px; margin-left: 20px;" >
+
+Your name: <br>
+<input type="text" name="realname" id="name" ><br>
+<br>
+
+Your email: <br>
+<input type="text" name="email" id="email"><br>
+<br>
+
+Your comments: <br>
+<textarea name="comments" rows="15" cols="50" id="comment"></textarea><br><br>
+		 <button type="submit"  onClick="menu();" style="background-color: #015b75; align-content: center; padding-left: 50px;padding-top: 10px;padding-right: 50px; padding-bottom: 10px; color: white;">Submit</button>
+	
+
+<!--<input type="submit" value="Submit" onClick="menu();">-->
+ 
+</form>
+		<br>	<br>
+	<script type="text/javascript">
+	
+	 
+function menu(){
+		
+		  var email = document.getElementById("email");
+	   var name = document.getElementById("name");
+     var   comment = document.getElementById("comment");
+
+		
+		 if(name.value.length ==0  ) {
+			 alert("Eneter Name");
+    /*confirm_password.setCustomValidity("Passwords Don't Match");*/
+  } else if(email.value.length ==0 ){
+	  
+	   alert("Eneter Email");
+  }
+		else if(comment.value.length ==0 ){
+	  
+	   alert("Eneter Comment");
+  }
+		
+		else{
+			alert("Feedback submitted Successful");
+		
+		}
+		
+
+		
+	}
+	</script>
+</body>
+</html>

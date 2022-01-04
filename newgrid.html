@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Packages Lst</title>
+</head>
+
+<body>
+	<div style="text-align:center">
+  <h2>Available Packages</h2>
+  <p>Click on the Packege for Detail below:</p>
+</div>
+
+<!-- Three columns -->
+<div class="row">
+  <div class="column" onclick="openTab('b1');" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyXMHnYgT_s0PsFv8PUIG98OsSwkcjDn38OzEdfdu66apaWj8zTTYm4G5WTEcZQ5y5k2E&usqp=CAU');">
+    Bronze Package on 20% Off<br>
+	  <s>200$</s> 180$
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjI0o-zR3h7n06qeus0TUNZ8Jjvr27NrCP2N9Amkcj0YYVxudgCIJBgA3tTB9lf-MRUv4&usqp=CAU');">
+    Silver Packege on 30% Off <br>
+	  <s>300$</s> 270$
+  </div>
+  <div class="column" onclick="openTab('b3');" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWpTlFr1ialjpoofOHBMM4zNXgCkcLZXLmv8p2SXYxxZqGUHwDm6r57o1MEqB8mk311zI&usqp=CAU');">
+    Gold Package on 40% Off
+	   <s>400$</s> 360$
+  </div>
+</div>
+
+<!-- Full-width columns: (hidden by default) -->
+<div id="b1" class="containerTab" style="display:none;background:green" >
+  <span    onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Bronze Package</h2>
+  <p>Get this awsome package and get a chance to win couple of 20% Off on your Next Trip</p>
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background:blue">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Silver Packege</h2>
+  <p>Get this awsome package and get 30% off on Hotel Casino </p>
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background:red">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Gold Package</h2>
+  <p>Get this awsome package and get 50% Off on Food and Bevrages  </p>
+</div>
+
+<script>
+	 var time = 0;
+	function menu(){
+		if(time==0){
+		 alert("Please Select Packege");	
+			time++;
+		}
+		else if(time>0)
+		
+		 alert("Your Package Booked");
+		
+	}
+	
+	
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
+	 <button  class="container" type="submit"  onClick="menu();">Checkout</button>
+</body>
+	<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+		
+		button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.container{  
+text-align: center;  
+	flex: initial;
+background-color: lightblue;
+	
+	margin-top: 100px;
+
+}  
+/* The grid: Three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+   height: 300dp;
+  padding: 50px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+.containerTab {
+  padding: 20px;
+  color: white;
+	
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+	
+}
+
+/* Closable button inside the container tab */
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+</html>
